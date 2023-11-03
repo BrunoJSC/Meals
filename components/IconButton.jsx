@@ -1,7 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Pressable, StyleSheet } from "react-native";
 
-export function IconButton({ icon, onClick, color }) {
+export function IconButton({ icon, onPress, color }) {
   return (
     <Pressable
       android_ripple={{ color: "#ccc" }}
@@ -9,7 +9,7 @@ export function IconButton({ icon, onClick, color }) {
         styles.button,
         pressed ? { opacity: 0.7 } : null,
       ]}
-      onPress={onClick}
+      onPress={onPress}
     >
       <Ionicons name={icon} size={24} color={color} />
     </Pressable>
